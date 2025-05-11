@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECH BAZAAR </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="2_shopping.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body style="padding-top: 70px;">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="shopping logo.jpg" alt="Logo" class="logo" />
+      <span class="brand">TECH BAZAAR </span>
+      <span id="usernameDisplay" class="text-light ms-3"></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#Mobile">Mobiles</a></li>
+            <li><a class="dropdown-item" href="#Laptop">Laptops</a></li>
+            <li><a class="dropdown-item" href="#Headphones">Headphones</a></li>
+            <li><a class="dropdown-item" href="#Camera">Cameras</a></li>
+            <li><a class="dropdown-item" href="#Smartwatch">Smartwatches</a></li>
+            <li><a class="dropdown-item" href="#Tablet">Tablets</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="3_about_us.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="4_contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <!-- Cart button could go here -->
+        </li>
+        <span id="usernameDisplay" class="text-light ms-3"></span>
+        <button id="loginBtn" class="btn btn-primary" onclick="signIn()">Login</button>
+        <button id="logoutBtn" class="btn btn-danger" style="display: none;" onclick="logOut()">Logout</button>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<button id="cartButton" class="floating-cart cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cartCount">0</span>
+</button>
+
+  <!-- header section -->
+<section class="text-light text-center p-5 pt-5" style="background: url('banner.jpg') center/cover no-repeat;">
+  <div class="container hero-overlay">
+    <h2 class="mb-4">Why Shop With Us?</h2>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-shipping-fast fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Fast Shipping</h5>
+            <p class="card-text">Get your gadgets delivered quickly and reliably.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-tags fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Best Prices</h5>
+            <p class="card-text">Unbeatable deals on top tech brands.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-headset fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">24/7 Support</h5>
+            <p class="card-text">We're here to help anytime, anywhere.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-sync-alt fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Easy Returns</h5>
+            <p class="card-text">Hassle-free returns if you're not satisfied.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-cogs fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Warranty Services</h5>
+            <p class="card-text">Extended warranties for peace of mind.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-lock fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Secure Payments</h5>
+            <p class="card-text">Shop safely with secure online transactions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-gift fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Gift Cards</h5>
+            <p class="card-text">Perfect for any occasion, with customizable amounts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-recycle fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Eco-Friendly</h5>
+            <p class="card-text">Sustainable and eco-friendly product options available.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <i class="fas fa-credit-card fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Easy Installments</h5>
+            <p class="card-text">Affordable monthly payment options for big purchases.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Main Section -->
+  <div class="container product-section">
+    <div class="row" id="productList">
+      <!-- Products dynamically generated -->
+    </div>
+  </div>
+
+  <!-- Buy Now Form Modal -->
+ <div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <form id="buyForm">
+        <!-- Header -->
+        <div class="modal-header bg-primary text-white rounded-top-4">
+          <h5 class="modal-title" id="buyNowModalLabel">🛒 Order Your Product</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Body -->
+        <div class="modal-body bg-light">
+          <!-- Full Name -->
+          <input id="fullNameInput" name="fullName" class="form-control form-control-lg mb-3 shadow-sm rounded" type="text" placeholder="Full Name" required readonly />
+
+          <!-- Email -->
+          <input id="emailInput" name="email" class="form-control form-control-lg mb-3 shadow-sm rounded" type="email" placeholder="Email Address" required  />
+
+          <!-- Shipping Address -->
+          <input id="shippingAddress" name="address" class="form-control form-control-lg mb-3 shadow-sm rounded" type="text" placeholder="Shipping Address" required />
+
+          <!-- Phone Number -->
+          <input id="phoneNumber" name="phone" class="form-control form-control-lg mb-3 shadow-sm rounded" type="number" placeholder="Phone Number" required />
+
+          <!-- Payment Method -->
+          <select id="paymentMethod" class="form-select form-select-lg mb-3 shadow-sm rounded" name="paymentMethod" required>
+            <option value="">Select Payment Method</option>
+            <option>Credit Card</option>
+            <option>UPI</option>
+            <option>Cash on Delivery</option>
+          </select>
+
+          <!-- Hidden Product Info -->
+          <input type="hidden" id="hiddenProductName" name="productName" />
+          <input type="hidden" id="hiddenProductPrice" name="productPrice" />
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer bg-white rounded-bottom-4">
+          <button type="submit" class="btn btn-success w-100 btn-lg fw-bold shadow-sm">🧾 Submit Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Cart Items</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body cart-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+          </table>
+          <h5 class="text-end">Grand Total: ₹<span id="grandTotal">0</span></h5>
+        </div>
+        <div class="modal-footer">
+          <button id="checkoutCart" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white text-center py-3">
+    <p>&copy; 2025 TECH BAZAAR </p>
+  </footer>
+
+  <script src="2_shopping.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

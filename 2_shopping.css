@@ -1,0 +1,224 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://img.freepik.com/free-photo/arrangement-black-friday-shopping-carts-with-copy-space_23-2148667047.jpg?semt=ais_hybrid&w=740') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  /* display: flex;
+  flex-direction: column; */
+  padding-top: 90px; 
+}
+
+/* Content wrapper below navbar */
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Prevent content hiding behind navbar */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #343a40;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar left (logo) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Navbar right (menu) */
+.navbar-right {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar-right li {
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-right li:hover {
+  color: #f0c14b;
+}
+
+/* Cart button */
+.cart-btn {
+  background: #f0c14b;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-btn:hover {
+  background-color: #e3a008;
+}
+
+#cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Hero Section (Home) */
+.hero-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 80px 20px;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5rem 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Cards General */
+.card {
+  border-radius: 1rem;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Force equal height */
+  object-fit: contain; /* or try 'cover' for cropping */
+  background-color: #fff;
+}
+
+.card-img-top {
+  padding: 10px;
+}
+
+/* Product Section */
+.product-section {
+  padding: 60px 30px;
+  backdrop-filter: blur(3px);
+}
+
+/* Category Title */
+.category-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+/* Floating Cart Button */
+.floating-cart {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #f0c14b;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.floating-cart:hover {
+  background-color: #e3a008;
+  transform: scale(1.1);
+}
+
+.floating-cart #cartCount {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  z-index: 10001;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .product-section {
+    padding: 40px 15px;
+  }
+}

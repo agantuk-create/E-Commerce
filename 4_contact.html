@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Tech Bazar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="4_contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+      
+          <!-- Logo + Brand + Welcome message on the left -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="shopping logo.jpg" alt="Logo" class="logo" />
+            Tech 
+          </a>
+          <span class="navbar-text ms-2" id="welcomeMessage">Hi, User</span>
+      
+          <!-- Toggler for mobile view -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Nav-links + buttons on the right -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav me-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="2_shopping.html">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="3_about_us.html">About</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
+            </ul>
+            <a href="index.html" class="btn btn-sm btn-outline-light me-2" id="loginLink" style="display: none;">Login</a>
+            <button class="btn btn-sm btn-outline-light" id="logoutLink" style="display: none;">Logout</button>
+          </div>
+        </div>
+      </nav>
+
+  <!-- Contact Form Section -->
+  <div class="container form-container mt-5 mb-5 p-4 bg-light rounded">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form id="contactForm">
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="fullName" class="form-label">Full Name*</label>
+      <input type="text" class="form-control" id="fullName" required>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email Address*</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" id="phone">
+    </div>
+    <div class="col-md-6">
+      <label for="subject" class="form-label">Subject</label>
+      <input type="text" class="form-control" id="subject">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <input type="text" class="form-control" id="address" placeholder="Street, City, Zip">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label d-block">Gender</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male">
+      <label class="form-check-label" for="genderMale">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+      <label class="form-check-label" for="genderFemale">Female</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="genderOther" value="Other">
+      <label class="form-check-label" for="genderOther">Other</label>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="contactTime" class="form-label">Preferred Contact Time</label>
+      <select class="form-select" id="contactTime">
+        <option selected disabled>Select a time</option>
+        <option>Morning</option>
+        <option>Afternoon</option>
+        <option>Evening</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="visitDate" class="form-label">Date of Visit</label>
+      <input type="date" class="form-control" id="visitDate">
+    </div>
+  </div>
+
+  <!-- <div class="mb-3">
+    <label for="attachment" class="form-label">Attach File (optional)</label>
+    <input class="form-control" type="file" id="attachment">
+  </div> -->
+
+  <div class="mb-3">
+    <label for="message" class="form-label">Your Message*</label>
+    <textarea class="form-control" id="message" rows="4" required></textarea>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="newsletter">
+    <label class="form-check-label" for="newsletter">Subscribe to our newsletter</label>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-dark px-4">Submit</button>
+  </div>
+</form>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 fixed-bottom">
+    &copy; 2025 Tech Bazar. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="4_contact.js"></script>
+</body>
+</html>

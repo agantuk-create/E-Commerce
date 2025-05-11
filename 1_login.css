@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  .left-side {
+    background: url('backgrounf\ shopping.jpg') no-repeat center center/cover;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  .right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .colorful-bg {
+    background: linear-gradient(135deg, #e6f7ff, #ccf5ff);
+  }
+  .login-form {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .login-form h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .login-form .desc {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  .btn-custom {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+  }
+  .required {
+    color: red;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+  }
+  .social-icons a {
+    font-size: 1.5em;
+    color: #3b5998;
+  }
+  

@@ -1,0 +1,87 @@
+body {
+  background: url('https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1740&q=80') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+  padding: 0.25rem 1rem; /* Reduced padding for a smaller navbar */
+  font-size: 0.875rem; /* Smaller font size for the navbar items */
+  height: 60px; /* Set a fixed height for the navbar */
+}
+
+/* Fix the mobile navbar toggle menu */
+.navbar-collapse {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background for dropdown menu */
+  padding: 10px 0;
+  border-radius: 0 0 8px 8px;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: 1rem; /* Small font size */
+  padding: 0.5rem 1rem; /* Adjust padding */
+}
+
+.navbar-nav .nav-link.active {
+  color: #f0f0f0 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important; /* Highlight on hover */
+}
+
+.navbar-brand {
+  font-size: 1.2rem; /* Slightly smaller font size for the brand */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo {
+  max-width: 50px; /* Smaller logo size */
+  height: 50px; /* Set height equal to width for a perfect circle */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio inside the circle */
+  margin-right: 10px; /* Space between logo and brand text */
+}
+
+/* About Us Page Container */
+.about-container {
+  margin-top: 80px; /* To avoid overlap with the navbar */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #f8f9fa;
+}
+
+h3 {
+  color: #f0f0f0;
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
